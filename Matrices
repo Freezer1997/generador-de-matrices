@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+            <br>
+            <br>
+        <input type="number" name="filas" id="filas">
+            <br>
+            <br>
+        <input type="number" name="columnas" id="columnas" >
+            <br>
+        <input type="button" value="GENERAR" id="GENERAR" one>
+
+    </center>
+ 
+</body>
+
+<script>
+var matriz=[];
+
+document.getElementById("GENERAR")
+    .addEventListener("click",function miColumna(){
+    for(var i=0 ; i<document.getElementById("columnas").value ;i++){
+        matriz[i] = [];
+        
+    };
+
+    matriz.forEach(function filas(){
+    for(var k=0 ; k<document.getElementById("columnas").value ;k++){
+          for(var l=0; l<document.getElementById("filas").value;l++){
+              for(var j=0 ; j<(document.getElementById("filas").value*document.getElementById("columnas").value) ;j++){
+                  matriz[k][l]=j;
+              };
+          };
+      };
+});
+
+
+function imprimeCol(){
+    for(var i=0 ; i<document.getElementById("columnas").value ;i++){
+        console.log(matriz[i]);
+          
+    };
+};
+imprimeCol();
+
+
+
+});
+</script>
+</html>
